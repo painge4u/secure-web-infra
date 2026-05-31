@@ -10,3 +10,4 @@
 **Verification**
 -Verified ip assignment with 'ip addr show'.
 -Confirmed hostname change with 'hostname'.
+ 
