@@ -54,3 +54,14 @@
 - Successfully executed script manually to confirm backup generation in `/root/backups`.
 - Confirmed "self-healing" by stopping the container and verifying the script restarted it.
 
+## 6. Automated Scheduling & Centralized Logging
+**Objective:** Implement system-managed task automation and an audit trail for maintenance activities.
+**Implementation:**
+- Scheduled the `web_maintenance.sh` script via `crontab` to execute daily at 02:00.
+- Implemented standard error (stderr) and standard output (stdout) redirection to `/var/log/web_maintenance.log` for troubleshooting.
+- Managed the lifecycle of automated tasks using the `crond` daemon.
+**Verification:**
+- Verified task execution through `/var/log/cron` and `journalctl`.
+- Confirmed log integrity by auditing script output in custom log files.
+
+
